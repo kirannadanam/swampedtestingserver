@@ -16,9 +16,9 @@ import pymysql
 load_dotenv()
 
 # Auth0 configuration
-AUTH0_DOMAIN = os.getenv("AUTH0_DOMAIN")
-AUTH0_CLIENT_ID = os.getenv("AUTH0_CLIENT_ID")
-AUTH0_CLIENT_SECRET = os.getenv("AUTH0_CLIENT_SECRET")
+AUTH0_DOMAIN="dev-i0xqob7z3wcxgnv6.us.auth0.com"
+AUTH0_CLIENT_ID="nli9lfPOU4Et0gyypt0yW3k2aBVEnj9T"
+AUTH0_CLIENT_SECRET="uAKVGMg_BwlbxpXciZ6VHESXGAz6u-nU2AHVLiw1CELwaz_WF0C3ToWqVw9dCkg3"
 AUTH0_CALLBACK_URL = "http://localhost:8501/"
 
 # Database Configuration
