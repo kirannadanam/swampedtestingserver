@@ -12,8 +12,6 @@ from urllib.parse import urlencode
 import geocoder
 import pymysql
 
-# Load environment variables
-load_dotenv()
 
 # Auth0 configuration
 AUTH0_DOMAIN="dev-i0xqob7z3wcxgnv6.us.auth0.com"
