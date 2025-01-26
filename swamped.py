@@ -17,13 +17,28 @@ import pymysql
 AUTH0_DOMAIN="dev-i0xqob7z3wcxgnv6.us.auth0.com"
 AUTH0_CLIENT_ID="nli9lfPOU4Et0gyypt0yW3k2aBVEnj9T"
 AUTH0_CLIENT_SECRET="uAKVGMg_BwlbxpXciZ6VHESXGAz6u-nU2AHVLiw1CELwaz_WF0C3ToWqVw9dCkg3"
-AUTH0_CALLBACK_URL = "https://swampedtestingserver.streamlit.app/"
+AUTH0_CALLBACK_URL="https://swampedtestingserver.streamlit.app/"
+
+
 
 # Database Configuration
 DB_HOST = "userdrinksdb.czs6iaqeqm1d.us-east-1.rds.amazonaws.com"
 DB_NAME = "UserDrinks"
 DB_USERNAME = "admin"
 DB_PASSWORD = "StrongPassword123"
+
+
+import streamlit as st
+
+st.set_page_config(page_title="Swamped", page_icon=":cocktail:")
+
+# Add CORS headers
+st.markdown("""
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta http-equiv="Access-Control-Allow-Methods" content="GET, POST, PUT, DELETE, OPTIONS">
+    <meta http-equiv="Access-Control-Allow-Headers" content="Origin, Content-Type, Accept">
+""", unsafe_allow_html=True)
+
 
 # Initialize session state
 if 'user' not in st.session_state:
