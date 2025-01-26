@@ -19,7 +19,7 @@ load_dotenv()
 AUTH0_DOMAIN="dev-i0xqob7z3wcxgnv6.us.auth0.com"
 AUTH0_CLIENT_ID="nli9lfPOU4Et0gyypt0yW3k2aBVEnj9T"
 AUTH0_CLIENT_SECRET="uAKVGMg_BwlbxpXciZ6VHESXGAz6u-nU2AHVLiw1CELwaz_WF0C3ToWqVw9dCkg3"
-AUTH0_CALLBACK_URL = "http://localhost:8501/"
+AUTH0_CALLBACK_URL = "https://swampedtestingserver.streamlit.app/"
 
 # Database Configuration
 DB_HOST = "userdrinksdb.czs6iaqeqm1d.us-east-1.rds.amazonaws.com"
@@ -77,10 +77,11 @@ def callback():
 
 def logout():
     params = {
-        'returnTo': 'http://localhost:8501',
+        'returnTo': 'https://swampedtestingserver.streamlit.app/',
         'client_id': AUTH0_CLIENT_ID
     }
     return f'https://{AUTH0_DOMAIN}/v2/logout?{urlencode(params)}'
+
 
 # Database functions
 def get_connection():
